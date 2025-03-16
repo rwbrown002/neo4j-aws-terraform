@@ -138,10 +138,6 @@ variable "bloom_key" {
   default     = "None"
 }
 
-variable "neo4j_password" {
-  description = "Password for the neo4j user"
-}
-
 variable "neo4j-ami-list" {
   description = "A map containing the neo4j AMIs"
   //type        = map(string)

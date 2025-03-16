@@ -9,7 +9,7 @@ output "neo4j_browser_url" {
 }
 
 output "neo4j_password" {
-  value = var.neo4j_password
+  value = aws_secretsmanager_secret_version.password_gen.secret_string
 }
 
 output "instance_type" {

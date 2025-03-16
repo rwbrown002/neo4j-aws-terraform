@@ -17,7 +17,7 @@ resource "aws_instance" "neo4j_instance" {
       install_bloom  = var.install_bloom
       gds_key        = var.gds_key
       bloom_key      = var.bloom_key
-      neo4j_password = var.neo4j_password
+      neo4j_password = aws_secretsmanager_secret_version.password_gen.secret_string
       install_apoc   = var.install_apoc
       node_count     = var.node_count
       lb_fqdn        = aws_lb.neo4j_lb.dns_name
